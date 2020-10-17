@@ -97,18 +97,20 @@
   transition: color 0.15s ease, border-color 0.15s ease;
 }
 
-.history ul{
+.history ul, .Dashboard ul{
   list-style: none;
   display: inline-block;
 }
 
-.history li {
+.history li, .Dashboard li{
   display: inline-block;
   margin: 0.5em;
 }
 
-
-
+.card .Dashboard {
+  text-align: center;
+  background-color: white;
+}
 .card:hover,
 .card:focus,
 .card:active {
@@ -136,4 +138,25 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+.Header {
+  display: block;
+  margin: 0%;
+}
+.Title h1, .newTest {
+  text-align: center;
+}
+
+#mybtn{
+  left: calc(50% - 318px/2 - 0.5px);
+  top: 638px;
+  margin: 0 0 1rem 0;
+  text-align: center;
+  padding: 1%;
+
+/* button fill */
+
+  background: linear-gradient(180deg, #56CCF2 0%, #2F80ED 100%);
+  border-radius: 8px;
 }
