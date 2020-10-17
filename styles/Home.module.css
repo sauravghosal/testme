@@ -159,3 +159,14 @@
   background: linear-gradient(180deg, #56CCF2 0%, #2F80ED 100%);
   border-radius: 8px;
 }
+
+.Dashboard .fa-1x {
+  font-size: 1.5rem;
+  }
+  .navbar-toggler.toggler-example {
+  cursor: pointer;
+  }
+  .dark-blue-text {
+  color: #0A38F5;
+  }
+  
