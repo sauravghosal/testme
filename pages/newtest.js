@@ -1,3 +1,5 @@
+
+import Link from 'next/link';
 export default function NewTest() {
     return (
         <div>
@@ -9,5 +11,4 @@ export default function NewTest() {
             </form>
 
         </div>
-    )
-}
+    );

@@ -1,3 +1,4 @@
+
 import Head from 'next/head'
 import styles from '../styles/global.css'
 import Link from 'next/link'
