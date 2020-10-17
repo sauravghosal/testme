@@ -1,9 +1,14 @@
-import Link from 'next/link';
 
-const NewTest = () => (
+import Link from 'next/link';
+export default function NewTest() {
+    return (
         <div>
-            <h1> Schedule your next test</h1>
-            <button> Click here to schedule your next test! </button>
+            <p>New Test</p>
+            <form>
+                <input type="text" id="username" name="username" maxlength="10"></input>
+                
+                <input type="submit" value="Submit"></input>
+            </form>
+
         </div>
-    )
-export default NewTest;
+    );
