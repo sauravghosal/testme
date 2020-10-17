@@ -1,5 +1,6 @@
 import styles from '../styles/Home.module.css'
 import Head from 'next/head'
+
 export default function TestingHistory() {
     return (
         <div>
@@ -9,15 +10,61 @@ export default function TestingHistory() {
         </Head>
        
             <h1>Testing History</h1>
-            <div className="card history">
-                <div className="card-body">
-                    <h5 className="card-title">Week 10/5/2020</h5>
-                    <ul className="card-text">
-                        <li>Status: Positive</li>
-                        <li>Updated: 10/7/2020</li>
-                    </ul>
+            
+            <div className="col">
+            <div className="card">
+                <a>Save Test History</a>
+            </div>
+            <br></br>
+            <br></br>
+                <div className="card m-3">
+                    <div className={styles.history}>
+                        <div className="card-body p-0 ">
+                            <div className="card-header border-secondary">
+                                <h5>Week 10/5/2020</h5>
+                            </div>
+                            <div className="card-text bg-warning">
+                                <ul >
+                                    <li>Status: Positive</li>
+                                    <li>Updated: 10/7/2020</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="card m-3">
+                    <div className={styles.history}>
+                        <div className="card-body p-0">
+                            <div className="card-header border-secondary">
+                                <h5>Week 10/5/2020</h5>
+                            </div>
+                            <div className="card-text bg-warning">
+                                <ul >
+                                    <li>Status: Positive</li>
+                                    <li>Updated: 10/7/2020</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="card m-3">
+                    <div className={styles.history}>
+                        <div className="card-body p-0">
+                            <div className="card-header border-secondary">
+                                <h5>Week 10/5/2020</h5>
+                            </div>
+                            <div className="card-text bg-warning">
+                                <ul >
+                                    <li>Status: Positive</li>
+                                    <li>Updated: 10/7/2020</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            
+
             
 
             <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
