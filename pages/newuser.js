@@ -1,5 +1,13 @@
 export default function NewUser() {
     return (
-        <p>New User</p>
+        <div>
+            <p>New User</p>
+            <form>
+                <input type="text" id="username" name="username" maxlength="10"></input>
+                
+                <input type="submit" value="Submit"></input>
+            </form>
+
+        </div>
     )
 }
