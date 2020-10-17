@@ -1,5 +1,8 @@
 export default function Stats() {
     return (
-        <p>Stats</p>
+        <div>
+            <p>Stats</p>
+            <img alt="Graph"></img>
+        </div>
     )
 }
