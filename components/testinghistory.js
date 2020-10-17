@@ -1,5 +1,7 @@
 import styles from '../styles/Home.module.css'
 import Head from 'next/head'
+// import theDownloadButton from '../images/downloadButton.png';
+
 export default function TestingHistory() {
     return (
         <div>
@@ -9,15 +11,83 @@ export default function TestingHistory() {
         </Head>
        
             <h1>Testing History</h1>
-            <div className="card history">
-                <div className="card-body">
-                    <h5 class="card-title">Week 10/5/2020</h5>
-                    <ul className="card-text">
-                        <li>Status: Positive</li>
-                        <li>Updated: 10/7/2020</li>
-                    </ul>
+            
+            <div className="col">
+            <div className="card m-3">
+                <div className="card-body bg-primary p-3">
+                <img src={theDownloadButton}></img>
+                    <div className="card-text text-white">
+                    
+                        <a>Save Test History</a>
+                    </div>
+                </div>
+                
+            </div>
+            <br></br>
+            <br></br>
+                <div className="card m-3">
+                    <div className={styles.history}>
+                        <div className="card-body p-0 ">
+                            <div className="card-header border-secondary">
+                                <h5>Week 10/12/2020</h5>
+                            </div>
+                            <div className="card-text bg-warning">
+                                <ul >
+                                    <li>Status: Positive</li>
+                                    <li>Updated: 10/14/2020</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="card m-3">
+                    <div className={styles.history}>
+                        <div className="card-body p-0">
+                            <div className="card-header border-secondary">
+                                <h5>Week 10/5/2020</h5>
+                            </div>
+                            <div className="card-text bg-secondary">
+                                <ul >
+                                    <li>Status: Pending</li>
+                                    <li>Updated: 10/7/2020</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="card m-3">
+                    <div className={styles.history}>
+                        <div className="card-body p-0">
+                            <div className="card-header border-secondary">
+                                <h5>Week 9/28/2020</h5>
+                            </div>
+                            <div className="card-text bg-light">
+                                <ul >
+                                    <li>Status: Negative</li>
+                                    <li>Updated: 9/29/2020</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="card m-3">
+                    <div className={styles.history}>
+                        <div className="card-body p-0">
+                            <div className="card-header border-secondary">
+                                <h5>Week 9/21/2020</h5>
+                            </div>
+                            <div className="card-text bg-danger">
+                                <ul >
+                                    <li>Status: No Test</li>
+                                    <li>Updated: --</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            
+
             
 
             <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
