@@ -11,4 +11,5 @@ export default function NewTest() {
             </form>
 
         </div>
-    );
+    )
+}

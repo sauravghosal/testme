@@ -11,7 +11,7 @@ export default function TestingHistory() {
             <h1>Testing History</h1>
             <div className="card history">
                 <div className="card-body">
-                    <h5 class="card-title">Week 10/5/2020</h5>
+                    <h5 className="card-title">Week 10/5/2020</h5>
                     <ul className="card-text">
                         <li>Status: Positive</li>
                         <li>Updated: 10/7/2020</li>

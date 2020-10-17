@@ -120,3 +120,37 @@
     flex-direction: column;
   }
 }
+
+.Header {
+  display: block;
+  margin: 0%;
+}
+.Title h1, .newTest {
+  text-align: center;
+}
+.cardBodyDash {
+  text-align: center;
+  padding: 5%; 
+  margin-left: 20%;
+  margin-right: 20%;
+  border-color: black;
+}
+.cardTitleDash {
+  display: block;
+  background-color: 	#D3D3D3;
+}
+
+.cardTextDash, .newTest li {
+  list-style-type: none;
+}
+
+#mybtn {
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px;
+  font-size:20px;
+  text-align: center;
+  margin:auto;
+  background-color: #C1C8E4;
+  border-color: black;
+}
