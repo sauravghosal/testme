@@ -33,41 +33,37 @@ export default function Dashboard() {
                             </div>
                         </div>
                     </div>
+            <br></br>
                     <center><buttons id={styles.mybtn}>Show barcode</buttons></center>
                                 {/* <img alt="barcode"></img>  */}
                 </div>
+                <br></br>
+            <br></br>
                     <center> <buttons id={styles.mybtn}><Link href="/newtest">
                     <a>+ New Test</a>
                         </Link></buttons></center>
+                        <br></br>
+            <br></br>
+                        <div><buttons id={styles.mybtn}><Link href="/newtest">
+                    <a>+ New Test</a>
+                        </Link></buttons> </div>
+                        <br></br>
+            <br></br>
+                        <div><buttons id={styles.mybtn}><Link href="/newtest">
+                    <a>+ New Test</a>
+                        </Link></buttons> </div>
+                        <br></br>
+            <br></br>
+                        <div><buttons id={styles.mybtn}><Link href="/newtest">
+                    <a>+ New Test</a>
+                        </Link></buttons> </div>
+                        <br></br>
+            <br></br>
+                        <div><buttons id={styles.mybtn}><Link href="/newtest">
+                    <a>+ New Test</a>
+                        </Link></buttons> </div>
             </div> 
             </div> 
             </div>
     )
 }
-
-
-
-            {/* <div className = {styles.Header}>
-                <div className = {styles.Title}>
-                    <h1>Dashboard</h1>
-                </div>
-            </div>
-            <div className = {styles.newTest}>
-            <li>
-                <buttons id={styles.mybtn}><Link href="/newtest">
-                    <a>+ New Test</a>
-                </Link></buttons>
-            </li>
-           </div>
-        <div>
-        <div className={styles.cardBodyDash}>
-                    <h1>Most Recent Test</h1>
-                    <h5 className={styles.cardTitleDash}>Week 10/5/2020</h5>
-                    <ul className={styles.cardTextDash}>
-                        <li>Status: Positive</li>
-                        <li>Updated: 10/7/2020</li>
-                    </ul>
-                    <buttons id={styles.mybtn}>Show barcode</buttons>
-                    <img alt="barcode"></img> 
-        //         {/* </div>
-        // </div> */}
