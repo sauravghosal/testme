@@ -15,7 +15,7 @@ export default function TestingHistory() {
             <div className="col">
             <div className="card m-3">
                 <div className="card-body bg-primary p-3">
-                <img src={theDownloadButton}></img>
+                <img src={require('../images/downloadButton.png')}></img>
                     <div className="card-text text-white">
                     
                         <a>Save Test History</a>
