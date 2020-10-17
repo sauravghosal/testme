@@ -7,7 +7,13 @@ export default function Dashboard() {
         <div class>
         <h1>Dashboard</h1>
 
-        <button href="newtest.js">+ New Test</button>
+        
+            <li>
+                <Link href="/newtest">
+                    <a>+ New Test</a>
+                </Link>
+            </li>
+           
         <h1>Most Recent Test</h1>
         <div>
             <p>Time:</p>
