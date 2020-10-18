@@ -37,7 +37,7 @@ export default function Dashboard() {
                                 </div>
                         </div>
                         <br></br>
-                        <center><Button variant="primary" size="lg" block id={styles.mybtn}>Show barcode</Button></center>
+                        <center><Button variant="primary" size="lg" block id={styles.mybtn2}><i class="fa fa-barcode" aria-hidden="true"></i> Show barcode</Button></center>
                                     {/* <img alt="barcode"></img>  */}
                             <br></br>
                     </div>

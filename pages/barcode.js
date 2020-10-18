@@ -11,9 +11,8 @@ export default function barcode() {
         <div className="col">
         {/* <img src={process.env.PUBLIC_URL + '/bar-code.jpg'}/>
         ​<picture>
-        <img src={barcodeIm} />
         </picture> */}
-        <p>Insert barcode here</p>
+        <center><img src="/barcodeImage.png" alt = "Image of Barcode"/></center>
     </div>
     </div>
   );
