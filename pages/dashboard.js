@@ -44,7 +44,7 @@ export default function Dashboard() {
                 <div className = {styles.Dashboard}>
                 <div class="col">
                 <div className="card">
-                    <a>Most Recent Test</a>
+                    <h5>Most Recent Test</h5>
                 </div>
                 <br></br>
                 <br></br>
@@ -63,7 +63,9 @@ export default function Dashboard() {
                                 </div>
                         </div>
                         <br></br>
-                        <center><Button variant="primary" size="lg" block id={styles.mybtn2}><i class="fa fa-barcode" aria-hidden="true"></i> Show barcode</Button></center>
+                        <center><Button variant="primary" size="lg" block id={styles.mybtn2}><i class="fa fa-barcode" aria-hidden="true"></i> <Link href="/barcode">
+                                <a> Show Barcode</a>
+                                </Link></Button></center>
                                     {/* <img alt="barcode"></img>  */}
                             <br></br>
                     </div>
