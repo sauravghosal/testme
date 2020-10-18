@@ -1,5 +1,6 @@
 import axios from "axios";
 import Navbar from "react-bootstrap/Navbar";
+import Button from "react-bootstrap/Button";
 
 export default function Home(props) {
   const [user, setUser] = React.useState({});
@@ -45,7 +46,8 @@ export default function Home(props) {
         <input type="password" id="password" name="password"></input>
         <br></br>
         <br></br>
-        <input type="submit" value="Submit"></input>
+
+        <input className = "bg-primary p-1 text-white" type="submit" value="Submit"></input>
       </form>
       </center>
     </div>

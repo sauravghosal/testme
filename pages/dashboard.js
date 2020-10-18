@@ -64,7 +64,7 @@ export default function Dashboard() {
                         </div>
                         <br></br>
                         <center><Button variant="primary" size="lg" block id={styles.mybtn2}><i class="fa fa-barcode" aria-hidden="true"></i> <Link href="/barcode">
-                                <a> Show Barcode</a>
+                                <a className = "text-white"> Show Barcode</a>
                                 </Link></Button></center>
                                     {/* <img alt="barcode"></img>  */}
                             <br></br>
@@ -72,25 +72,25 @@ export default function Dashboard() {
                     <br></br>
                 <br></br>
                 <center><Button variant="primary" size="lg" block id={styles.mybtn}><i class="fa fa-plus" aria-hidden="true"></i><Link href="https://mytest.gatech.edu/">
-                                <a> New Test</a>
+                                <a className = "text-white"> New Test</a>
                                 </Link></Button></center>
                             <br></br>
                 <br></br>
                             <div>
                             <center><Button variant="primary" size="lg" block id={styles.mybtn}><i class="fa fa-bar-chart" aria-hidden="true"></i><Link href="/history">
-                                <a> My Test History</a>
+                                <a className = "text-white"> My Test History</a>
                                 </Link></Button></center>
                             </div>
                             <br></br>
                 <br></br>
                             <div><center><Button variant="primary" size="lg" block id={styles.mybtn}><i class="fa fa-users" aria-hidden="true"></i><Link href="https://health.gatech.edu/coronavirus/health-alerts">
-                                <a> Community</a>
+                                <a className = "text-white"> Community</a>
                                 </Link></Button></center>
                             </div>
                             <br></br>
                 <br></br>
                             <div><center><Button variant="primary" size="lg" block id={styles.mybtn}><i class="fa fa-plus" aria-hidden="true"></i><Link href="https://health.gatech.edu/coronavirus/operations-status">
-                                <a> Resources</a>
+                                <a className = "text-white"> Resources</a>
                                 </Link></Button></center> </div>
                             <br></br>
                 <br></br>
