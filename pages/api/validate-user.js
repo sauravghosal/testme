@@ -12,7 +12,14 @@ const users = [
     race: "Asian American",
     birthday: "10-10-1",
     residence: "Fulton Hall",
-    testingHistory: Array[(Date, Boolean)],
+    testingHistory: [
+      { date: new Date("10/1/2020"), result: 0 },
+      { date: new Date("10/5/2020"), result: 1 },
+      { date: new Date("10/8/2020"), result: 0 },
+      { date: new Date("10/10/2020"), result: 1 },
+      { date: new Date("10/17/2020"), result: 2 },
+      { date: new Date("10/30/2020"), result: 1 },
+    ],
   },
   {
     name: "Saurav Ghosal",

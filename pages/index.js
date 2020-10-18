@@ -1,7 +1,8 @@
 import axios from "axios";
+import { useRouter } from "next/router";
 
 export default function Home(props) {
-  const [user, setUser] = React.useState({});
+  const router = useRouter();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -12,6 +13,8 @@ export default function Home(props) {
       })
       .then((response) => {
         window.localStorage.setItem("user", JSON.stringify(response.data));
+        props.setUser(response.data);
+        router.push("dashboard");
       })
       .catch((err) => {
         console.log(err);
@@ -19,18 +22,16 @@ export default function Home(props) {
   };
 
   return (
-    <div><center>
-      {console.log(user)}
-      <img src="/splash.gif" alt = "gif"></img>
+    <div>
+      <p>Login</p>
       <form onSubmit={handleSubmit}>
         <p>Username</p>
         <input type="text" id="username" name="username"></input>
         <p>Password</p>
-        <input type="password" id="password" name="password"></input>
+        <input type="text" id="password" name="password"></input>
         <br></br>
         <input type="submit" value="Submit"></input>
       </form>
-      </center>
     </div>
   );
 }

@@ -1,16 +1,5 @@
 import Card from "../components/Card";
 import Button from "react-bootstrap/Button";
-import dynamic from "next/dynamic";
-
-const testingHistory = [
-  { date: new Date("10/1/2020"), result: 0 },
-  { date: new Date("10/5/2020"), result: 1 },
-  { date: new Date("3/23/1999"), result: 0 },
-  { date: new Date("10/8/2020"), result: 0 },
-  { date: new Date("10/10/2020"), result: 1 },
-  { date: new Date("10/17/2020"), result: 2 },
-  { date: new Date("10/30/2020"), result: 1 },
-];
 
 const monthNames = [
   "January",
@@ -34,17 +23,22 @@ function getSunday(d) {
   return new Date(d.setDate(diff));
 }
 
-const testingHistoryGroupedByDate = testingHistory.reduce((acc, test) => {
-  const yearWeek = `Week of ${getSunday(test.date)}`;
-  if (!acc[yearWeek]) {
-    acc[yearWeek] = [];
-  }
-  acc[yearWeek].push({ date: test.date, result: test.result });
-  return acc;
-}, {});
-
-function History() {
+export default function History(props) {
   let html2pdf;
+  console.log(props);
+
+  const testingHistoryGroupedByDate = props.user.testingHistory
+    .sort((test1, test2) => new Date(test2.date) - new Date(test1.date))
+    .reduce((acc, test) => {
+      const yearWeek = `Week of ${getSunday(test.date)
+        .toString()
+        .substring(0, 15)}`;
+      if (!acc[yearWeek]) {
+        acc[yearWeek] = [];
+      }
+      acc[yearWeek].push({ date: test.date, result: test.result });
+      return acc;
+    }, {});
 
   React.useEffect(() => {
     html2pdf = require("html2pdf.js");
@@ -57,7 +51,7 @@ function History() {
       filename: "testing-history.pdf",
       image: { type: "jpeg", quality: 0.98 },
       html2canvas: { scale: 2 },
-      jsPDF: { unit: "in", format: "letter", orientation: "landscape" },
+      jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
     };
     // New Promise-based usage:
     html2pdf().from(element).set(opt).save();
@@ -77,7 +71,3 @@ function History() {
     </div>
   );
 }
-
-export default dynamic(() => Promise.resolve(History), {
-  ssr: false,
-});
