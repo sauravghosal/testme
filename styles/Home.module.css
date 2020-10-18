@@ -157,9 +157,14 @@
 
 #mybtn{
   background: linear-gradient(180deg, #56CCF2 0%, #2F80ED 100%);
-  padding: 3%;
+  padding: 1em;
 }
 
+#mybtn2 {
+  background: linear-gradient(180deg, #56CCF2 0%, #2F80ED 100%);
+  margin-right: 2%;
+  width: 75%;
+}
 .Dashboard .fa-1x {
   font-size: 1.5rem;
   }
@@ -169,4 +174,3 @@
   .dark-blue-text {
   color: #0A38F5;
   }
-  

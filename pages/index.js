@@ -21,7 +21,7 @@ export default function Home(props) {
   return (
     <div>
       {console.log(user)}
-      <p>Login</p>
+      <img src="/splash.gif" alt = "gif"></img>
       <form onSubmit={handleSubmit}>
         <p>Username</p>
         <input type="text" id="username" name="username"></input>
