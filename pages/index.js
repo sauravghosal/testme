@@ -38,7 +38,7 @@ export default function Home(props) {
           TestMe
         </Navbar.Brand>
       </Navbar>
-      {console.log(user)}
+      {/* {console.log(user)} */}
       <div className ="pl-5 ml-5">
       <img src="/splash.gif" alt = "gif"></img>
       </div>
@@ -52,7 +52,13 @@ export default function Home(props) {
         <br></br>
         <input className = "bg-primary p-1 text-white" type="submit" value="Submit"></input>
       </form>
-
+      <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+      <p><b>Note:</b> To test this out without creating an account, use username: covidFreeStudent with password: georgiaTech</p>
       </center>
     </div>
   );

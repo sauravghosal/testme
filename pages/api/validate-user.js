@@ -23,9 +23,9 @@ const users = [
   },
   {
     name: "Saurav Ghosal",
-    username: "paulinaschuler",
+    username: "covidFreeStudent",
     email: "sghosal@gatech.edu",
-    password: "hello",
+    password: "georgiaTech",
     gtid: "900456784",
     phone: "(321)-567-8902",
     sex: "Male",
