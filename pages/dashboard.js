@@ -2,6 +2,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
+import Button from "react-bootstrap/Button";
 
 export default function Dashboard() {
     return (
@@ -22,7 +23,6 @@ export default function Dashboard() {
                 <br></br>
                 <br></br>
                     <div className="card m-3">
-                        <div className="card entire">
                             <div className="card-body p-0 ">
                                 <div className="card-header border-secondary">
                                     <h5>Week 10/5/2020</h5>
@@ -30,44 +30,42 @@ export default function Dashboard() {
                                 <div className="card-text bg-status">
                                     <ul >
                                         <li>Status: Pending</li>
+                                        <br></br>
                                         <li>Updated: 10/7/2020</li>
                                     </ul>
                                     <br></br>
                                 </div>
-                            </div>
                         </div>
-                <br></br>
-                        <center><buttons id={styles.mybtn}>Show barcode</buttons></center>
+                        <br></br>
+                        <center><Button variant="primary" size="lg" block id={styles.mybtn}>Show barcode</Button></center>
                                     {/* <img alt="barcode"></img>  */}
+                            <br></br>
                     </div>
                     <br></br>
                 <br></br>
-                        <center> <buttons id={styles.mybtn}><Link href="/newtest">
-                        <a>+ New Test</a>
-                            </Link></buttons></center>
+                <center><Button variant="primary" size="lg" block id={styles.mybtn}><i class="fa fa-plus" aria-hidden="true"></i><Link href="https://mytest.gatech.edu/">
+                                <a> New Test</a>
+                                </Link></Button></center>
                             <br></br>
                 <br></br>
                             <div>
-                                <center><buttons id={styles.mybtn}><Link href="/newtest">
-                                <a>+ New Test</a>
-                                </Link></buttons></center> 
+                            <center><Button variant="primary" size="lg" block id={styles.mybtn}><i class="fa fa-bar-chart" aria-hidden="true"></i><Link href="/history">
+                                <a> My Test History</a>
+                                </Link></Button></center>
                             </div>
                             <br></br>
                 <br></br>
-                            <div><center><buttons id={styles.mybtn}><Link href="/newtest">
-                                <a>+ New Test</a>
-                                </Link></buttons></center> 
+                            <div><center><Button variant="primary" size="lg" block id={styles.mybtn}><i class="fa fa-users" aria-hidden="true"></i><Link href="https://health.gatech.edu/coronavirus/health-alerts">
+                                <a> Community</a>
+                                </Link></Button></center>
                             </div>
                             <br></br>
                 <br></br>
-                            <div><center><buttons id={styles.mybtn}><Link href="/newtest">
-                        <a>+ New Test</a>
-                            </Link></buttons></center> </div>
+                            <div><center><Button variant="primary" size="lg" block id={styles.mybtn}><i class="fa fa-plus" aria-hidden="true"></i><Link href="https://health.gatech.edu/coronavirus/operations-status">
+                                <a> Resources</a>
+                                </Link></Button></center> </div>
                             <br></br>
                 <br></br>
-                            <div><center><buttons id={styles.mybtn}><Link href="/newtest">
-                        <a>+ New Test</a>
-                            </Link></buttons> </center></div>
                 </div> 
                 </div> 
                 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
