@@ -19,7 +19,7 @@ export default function Home(props) {
   };
 
   return (
-    <div>
+    <div><center>
       {console.log(user)}
       <img src="/splash.gif" alt = "gif"></img>
       <form onSubmit={handleSubmit}>
@@ -30,6 +30,7 @@ export default function Home(props) {
         <br></br>
         <input type="submit" value="Submit"></input>
       </form>
+      </center>
     </div>
   );
 }
