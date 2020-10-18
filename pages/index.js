@@ -1,4 +1,5 @@
 import axios from "axios";
+import Navbar from "react-bootstrap/Navbar";
 
 export default function Home(props) {
   const [user, setUser] = React.useState({});
@@ -20,13 +21,29 @@ export default function Home(props) {
 
   return (
     <div><center>
+        <Navbar bg="light">
+        <Navbar.Brand href="/dashboard">
+          <img
+            alt="testme logo"
+            src="/logo.png"
+            width="30"
+            height="30"
+            className="d-inline-block align-top"
+          />
+          TestMe
+        </Navbar.Brand>
+      </Navbar>
       {console.log(user)}
+      <div className ="pl-5 ml-5">
       <img src="/splash.gif" alt = "gif"></img>
+      </div>
       <form onSubmit={handleSubmit}>
-        <p>Username</p>
+        <h3>Username</h3>
         <input type="text" id="username" name="username"></input>
-        <p>Password</p>
+        <br></br>
+        <h3 className ="mt-3">Password</h3>
         <input type="password" id="password" name="password"></input>
+        <br></br>
         <br></br>
         <input type="submit" value="Submit"></input>
       </form>
