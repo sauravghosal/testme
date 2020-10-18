@@ -46,7 +46,6 @@ export default function Home(props) {
         <input type="password" id="password" name="password"></input>
         <br></br>
         <br></br>
-
         <input className = "bg-primary p-1 text-white" type="submit" value="Submit"></input>
       </form>
       </center>
