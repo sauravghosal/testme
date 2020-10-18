@@ -1,16 +1,7 @@
 import Card from "../components/Card";
 import Button from "react-bootstrap/Button";
 import Navbar from "react-bootstrap/Navbar";
-import Link from 'next/link'
-
-const testingHistory = [
-  { date: new Date("10/1/2020"), result: 0 },
-  { date: new Date("10/5/2020"), result: 1 },
-  { date: new Date("10/8/2020"), result: 0 },
-  { date: new Date("10/10/2020"), result: 1 },
-  { date: new Date("10/17/2020"), result: 2 },
-  { date: new Date("10/30/2020"), result: 1 },
-];
+import Link from "next/link";
 
 const monthNames = [
   "January",
@@ -34,21 +25,43 @@ function getSunday(d) {
   return new Date(d.setDate(diff));
 }
 
-const testingHistoryGroupedByDate = testingHistory.reduce((acc, test) => {
+export default function History(props) {
+  let html2pdf;
+  console.log(props);
 
+  const testingHistoryGroupedByDate = props.user.testingHistory
+    .sort((test1, test2) => new Date(test2.date) - new Date(test1.date))
+    .reduce((acc, test) => {
+      const yearWeek = `Week of ${getSunday(test.date)
+        .toString()
+        .substring(0, 15)}`;
+      if (!acc[yearWeek]) {
+        acc[yearWeek] = [];
+      }
+      acc[yearWeek].push({ date: test.date, result: test.result });
+      return acc;
+    }, {});
 
-  const yearWeek = `Week of ${getSunday(test.date)}`;
-  if (!acc[yearWeek]) {
-    acc[yearWeek] = [];
-  }
-  acc[yearWeek].push({ date: test.date, result: test.result });
-  return acc;
-}, {});
+  React.useEffect(() => {
+    html2pdf = require("html2pdf.js");
+  }, []);
 
-export default function History() {
+  const handleClick = () => {
+    const element = document.getElementById("testing-history");
+    var opt = {
+      margin: 1,
+      filename: "testing-history.pdf",
+      image: { type: "jpeg", quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
+    };
+    // New Promise-based usage:
+    html2pdf().from(element).set(opt).save();
+  };
+
   return (
     <div>
-             <Navbar bg="light">
+      <Navbar bg="light">
         <Navbar.Brand href="/dashboard">
           <img
             alt="testme logo"
@@ -60,27 +73,44 @@ export default function History() {
           TestMe
         </Navbar.Brand>
         <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Menu
-        </button>
-        <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
-          <button class="dropdown-item" type="button"><Link href="/dashboard">
-          <a>Dashboard</a></Link></button>
-          <button class="dropdown-item" type="button"><Link href="/history">
-          <a>Your History</a></Link></button>
-          <button class="dropdown-item" type="button"><Link href="https://health.gatech.edu/coronavirus/health-alerts">
-          <a>Resources</a></Link></button>
+          <button
+            class="btn btn-primary dropdown-toggle"
+            type="button"
+            id="dropdownMenu2"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Menu
+          </button>
+          <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
+            <button class="dropdown-item" type="button">
+              <Link href="/dashboard">
+                <a>Dashboard</a>
+              </Link>
+            </button>
+            <button class="dropdown-item" type="button">
+              <Link href="/history">
+                <a>Your History</a>
+              </Link>
+            </button>
+            <button class="dropdown-item" type="button">
+              <Link href="https://health.gatech.edu/coronavirus/health-alerts">
+                <a>Resources</a>
+              </Link>
+            </button>
           </div>
         </div>
-      </Navbar> 
-      <h1>Testing History</h1>
-      <div className="col">
-        {Object.entries(testingHistoryGroupedByDate).map((val) => {
-          console.log(val);
-          return <Card testWeek={val[0]} tests={val[1]} />;
-        })}
+      </Navbar>
+      <div id="testing-history">
+        <h1>Testing History</h1>
+        <div className="col">
+          {Object.entries(testingHistoryGroupedByDate).map((val) => {
+            return <Card testWeek={val[0]} tests={val[1]} />;
+          })}
+        </div>
       </div>
-      <Button variant="primary">
+      <Button variant="primary" onClick={handleClick}>
         <i className="fa fa-download"></i> Save Testing History
       </Button>
     </div>
