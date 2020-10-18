@@ -35,6 +35,7 @@ export default function barcode() {
         </div>
       </Navbar> 
         <center><h1>Your Barcode:</h1></center>
+        <br></br>
         <div className="col">
         {/* <img src={process.env.PUBLIC_URL + '/bar-code.jpg'}/>
         ​<picture>

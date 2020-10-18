@@ -27,36 +27,32 @@ export default function Home(props) {
     <div>
       <center>
         <Navbar bg="light">
-          <Navbar.Brand href="/dashboard">
-            <img
-              alt="testme logo"
-              src="/logo.png"
-              width="30"
-              height="30"
-              className="d-inline-block align-top"
-            />
-            TestMe
-          </Navbar.Brand>
-        </Navbar>
+        <Navbar.Brand href="/dashboard">
+          <img
+            alt="testme logo"
+            src="/logo.png"
+            width="30"
+            height="30"
+            className="d-inline-block align-top"
+          />
+          TestMe
+        </Navbar.Brand>
+      </Navbar>
+      {console.log(user)}
+      <div className ="pl-5 ml-5">
+      <img src="/splash.gif" alt = "gif"></img>
+      </div>
+      <form onSubmit={handleSubmit}>
+        <h3>Username</h3>
+        <input type="text" id="username" name="username"></input>
+        <br></br>
+        <h3 className ="mt-3">Password</h3>
+        <input type="password" id="password" name="password"></input>
+        <br></br>
+        <br></br>
+        <input className = "bg-primary p-1 text-white" type="submit" value="Submit"></input>
+      </form>
 
-        <div className="pl-5 ml-5">
-          <img src="/splash.gif" alt="gif"></img>
-        </div>
-        <form onSubmit={handleSubmit}>
-          <h3>Username</h3>
-          <input type="text" id="username" name="username"></input>
-          <br></br>
-          <h3 className="mt-3">Password</h3>
-          <input type="password" id="password" name="password"></input>
-          <br></br>
-          <br></br>
-
-          <input
-            className="bg-primary p-1 text-white"
-            type="submit"
-            value="Submit"
-          ></input>
-        </form>
       </center>
     </div>
   );
