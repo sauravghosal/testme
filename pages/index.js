@@ -19,9 +19,9 @@ export default function Home(props) {
   };
 
   return (
-    <div>
+    <div><center>
       {console.log(user)}
-      <p>Login</p>
+      <img src="/splash.gif" alt = "gif"></img>
       <form onSubmit={handleSubmit}>
         <p>Username</p>
         <input type="text" id="username" name="username"></input>
@@ -30,6 +30,7 @@ export default function Home(props) {
         <br></br>
         <input type="submit" value="Submit"></input>
       </form>
+      </center>
     </div>
   );
 }

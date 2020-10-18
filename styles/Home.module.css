@@ -138,6 +138,14 @@
     flex-direction: column;
   }
 }
+@media (max-width: 768px) {
+  #mybtn {
+    padding:2px 4px;
+    font-size:95%;
+    line-height: 1;
+    width: 30%;
+  }
+}
 
 .Header {
   display: block;
@@ -148,14 +156,22 @@
 }
 
 #mybtn{
-  left: calc(50% - 318px/2 - 0.5px);
-  top: 638px;
-  margin: 0 0 1rem 0;
-  text-align: center;
-  padding: 1%;
-
-/* button fill */
-
   background: linear-gradient(180deg, #56CCF2 0%, #2F80ED 100%);
-  border-radius: 8px;
+  padding: 1em;
 }
+
+#mybtn2 {
+  background: linear-gradient(180deg, #56CCF2 0%, #2F80ED 100%);
+  margin-right: 2%;
+  width: 75%;
+}
+.Dashboard .fa-1x {
+  font-size: 1.5rem;
+  }
+  .navbar-toggler.toggler-example {
+  cursor: pointer;
+  }
+  .dark-blue-text {
+  color: #0A38F5;
+  }
+  
