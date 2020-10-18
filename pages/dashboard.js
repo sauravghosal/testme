@@ -2,8 +2,9 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import Button from "react-bootstrap/Button";
+import Navbar from "react-bootstrap/Navbar";
 
-export default function Dashboard(props) {
+export default function Dashboard() {
   return (
     <html lang="en">
       <Head>
@@ -19,10 +20,54 @@ export default function Dashboard(props) {
         ></meta>
       </Head>
       <body>
+        <Navbar bg="light">
+          <Navbar.Brand href="/dashboard">
+            <img
+              alt="testme logo"
+              src="/logo.png"
+              width="30"
+              height="30"
+              className="d-inline-block align-top"
+            />
+            TestMe
+          </Navbar.Brand>
+          <div class="dropdown">
+            <button
+              class="btn btn-primary dropdown-toggle"
+              type="button"
+              id="dropdownMenu2"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Menu
+            </button>
+            <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
+              <button class="dropdown-item" type="button">
+                <Link href="/dashboard">
+                  <a>Dashboard</a>
+                </Link>
+              </button>
+              <button class="dropdown-item" type="button">
+                <Link href="/history">
+                  <a>Your History</a>
+                </Link>
+              </button>
+              <button class="dropdown-item" type="button">
+                <Link href="https://health.gatech.edu/coronavirus/health-alerts">
+                  <a>Resources</a>
+                </Link>
+              </button>
+            </div>
+          </div>
+        </Navbar>
         <div className={styles.Dashboard}></div>
-        <h1>{props.user.name}'s Dashboard</h1>
+        <h1>Dashboard</h1>
         <div className={styles.Dashboard}>
           <div class="col">
+            <div className="card">
+              <h5>Most Recent Test</h5>
+            </div>
             <br></br>
             <br></br>
             <div className="card m-3">
@@ -42,7 +87,10 @@ export default function Dashboard(props) {
               <br></br>
               <center>
                 <Button variant="primary" size="lg" block id={styles.mybtn2}>
-                  <i class="fa fa-barcode" aria-hidden="true"></i> Show barcode
+                  <i class="fa fa-barcode" aria-hidden="true"></i>{" "}
+                  <Link href="/barcode">
+                    <a className="text-white"> Show Barcode</a>
+                  </Link>
                 </Button>
               </center>
               {/* <img alt="barcode"></img>  */}
@@ -54,7 +102,7 @@ export default function Dashboard(props) {
               <Button variant="primary" size="lg" block id={styles.mybtn}>
                 <i class="fa fa-plus" aria-hidden="true"></i>
                 <Link href="https://mytest.gatech.edu/">
-                  <a> New Test</a>
+                  <a className="text-white"> New Test</a>
                 </Link>
               </Button>
             </center>
@@ -65,7 +113,7 @@ export default function Dashboard(props) {
                 <Button variant="primary" size="lg" block id={styles.mybtn}>
                   <i class="fa fa-bar-chart" aria-hidden="true"></i>
                   <Link href="/history">
-                    <a> My Test History</a>
+                    <a className="text-white"> My Test History</a>
                   </Link>
                 </Button>
               </center>
@@ -77,7 +125,7 @@ export default function Dashboard(props) {
                 <Button variant="primary" size="lg" block id={styles.mybtn}>
                   <i class="fa fa-users" aria-hidden="true"></i>
                   <Link href="https://health.gatech.edu/coronavirus/health-alerts">
-                    <a> Community</a>
+                    <a className="text-white"> Community</a>
                   </Link>
                 </Button>
               </center>
@@ -89,7 +137,7 @@ export default function Dashboard(props) {
                 <Button variant="primary" size="lg" block id={styles.mybtn}>
                   <i class="fa fa-plus" aria-hidden="true"></i>
                   <Link href="https://health.gatech.edu/coronavirus/operations-status">
-                    <a> Resources</a>
+                    <a className="text-white"> Resources</a>
                   </Link>
                 </Button>
               </center>{" "}

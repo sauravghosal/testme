@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }) {
           crossorigin="anonymous"
         />
       </Head>
-      <Navbar bg="light">
+      {/* <Navbar bg="light">
         <Navbar.Brand href="/dashboard">
           <img
             alt="testme logo"
@@ -33,31 +33,20 @@ function MyApp({ Component, pageProps }) {
           />
           TestMe
         </Navbar.Brand>
-        <div className="dropdown">
-          <button
-            className="btn btn-primary dropdown-toggle"
-            type="button"
-            id="dropdownMenu2"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            {/* <i class="fa fa-bars" aria-hidden="true"></i> */}
-            Menu
-          </button>
-          <div className="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
-            <button className="dropdown-item" type="button">
-              Dashboard
-            </button>
-            <button className="dropdown-item" type="button">
-              Your History
-            </button>
-            <button className="dropdown-item" type="button">
-              Resources
-            </button>
+        <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Menu
+        </button>
+        <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
+          <button class="dropdown-item" type="button"><Link href="/dashboard">
+          <a>Dashboard</a></Link></button>
+          <button class="dropdown-item" type="button"><Link href="/history">
+          <a>Your History</a></Link></button>
+          <button class="dropdown-item" type="button"><Link href="https://health.gatech.edu/coronavirus/health-alerts">
+          <a>Resources</a></Link></button>
           </div>
         </div>
-      </Navbar>
+      </Navbar> */}
       <Component {...pageProps} user={user} setUser={setUser} />
       <script
         src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
